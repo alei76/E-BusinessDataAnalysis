@@ -10,13 +10,13 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
 import com.ebusiness.report.mr.mapper.ReportMapper;
 import com.ebusiness.report.mr.reducer.reportReducer;
+import com.ebusiness.report.outputformat.DBOutputFormat;
 
 public class ReportDriver {
 
 	public static void main(String[] args) throws Exception {
 
 		Configuration conf = new Configuration();
-
 		if (args.length != 2) {
 			System.err.println("Usage:  <in> <out>");
 			System.exit(2);
@@ -39,11 +39,13 @@ public class ReportDriver {
 		job.setMapperClass(ReportMapper.class);
 		job.setCombinerClass(reportReducer.class);
 		job.setReducerClass(reportReducer.class);
-		job.setOutputKeyClass(IntWritable.class);
-		job.setOutputValueClass(ReportOutputTuple.class);
+	
 		job.setInputFormatClass(TextInputFormat.class);
 		TextInputFormat.addInputPath(job, new Path(args[0]));
-		FileOutputFormat.setOutputPath(job, new Path(args[1]));
+		job.setOutputFormatClass(DBOutputFormat.class);
+		job.setOutputKeyClass(IntWritable.class);
+		job.setOutputValueClass(ReportOutputTuple.class);
+		//FileOutputFormat.setOutputPath(job, new Path(args[1]));
 		System.exit(job.waitForCompletion(true) ? 0 : 1);
 
 	}

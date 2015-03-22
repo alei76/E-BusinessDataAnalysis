@@ -15,6 +15,7 @@
 		<org.apache.hadoop>2.5.0</org.apache.hadoop>
 		<org.apache.mahout>0.9</org.apache.mahout>
 		<junit.version>4.10</junit.version>
+		<org.postgresql.version>9.3-1101-jdbc4</org.postgresql.version>
 	</properties>
 
 	<dependencyManagement>
@@ -44,6 +45,11 @@
 				<groupId>org.apache.mahout</groupId>
 				<artifactId>mahout-core</artifactId>
 				<version>${org.apache.mahout}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.postgresql</groupId>
+				<artifactId>postgresql</artifactId>
+				<version>${org.postgresql.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
