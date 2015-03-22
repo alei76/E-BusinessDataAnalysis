@@ -37,7 +37,7 @@ public class ReportDriver {
 		Job job = Job.getInstance(conf, "ebusinessReport");
 		job.setJarByClass(ReportDriver.class);
 		job.setMapperClass(ReportMapper.class);
-		//job.setCombinerClass(reportReducer.class);
+		job.setCombinerClass(reportReducer.class);
 		job.setReducerClass(reportReducer.class);
 		job.setOutputKeyClass(IntWritable.class);
 		job.setOutputValueClass(ReportOutputTuple.class);
