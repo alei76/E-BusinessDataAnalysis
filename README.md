@@ -6,6 +6,6 @@ E-BusinessDataAnalysis/电商数据分析
 ###3:数据容量大概2G，Json格式的爬虫数据。定义一个ETL层对数据进行抽取和格式化，定义了一个DB层采用自定义outputformat把结果直接输出到PostgreSQL。 
 ###4:mapreduce采用经典的概要设计模式，使用combine把map输出的中间结果进行处理，减少reduce端的数据量，同时也提高整个mapreduce程序的效率。
 
-数据格式如下：
-{"name":"玻璃碗 沙拉碗 米饭碗","nick":"金彩","_id":"263636363","category":"121221122""query":"碗","area":"金华"，"price":"5.0"}
+####数据格式如下：
+####{"name":"玻璃碗 沙拉碗 米饭碗","nick":"金彩","_id":"263636363","category":"121221122""query":"碗","area":"金华"，"price":"5.0"}
 
