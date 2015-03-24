@@ -44,18 +44,12 @@ public class reportReducer extends Reducer<IntWritable, ReportOutputTuple, IntWr
 			count+= inTuple.getCount();
 			BigDecimal  tmpMax = BigDecimal.valueOf(inTuple.getMaxPrice());
 			
-			if(tmpMax.intValue()>9999999){
-				System.out.println(9999999);
-			}
-			
 			if(max==null||max.compareTo(tmpMax)<0){
 				max =tmpMax;
 			}
 			
 			BigDecimal  tmpMin = BigDecimal.valueOf(inTuple.getMinPrice());
-			if(tmpMin.intValue()==0.01){
-				System.out.println(tmpMin.intValue());
-			}
+			
 			if(min==null||min.compareTo(tmpMin)>0){
 				min=tmpMin;
 			}
