@@ -8,8 +8,8 @@
 		<artifactId>ebusiness-master</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>ebusiness-report</artifactId>
-	<name>ebusiness-report</name>
+	<artifactId>ebusiness-etl</artifactId>
+	<name>ebusiness-etl</name>
 	<url>http://maven.apache.org</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -33,12 +33,8 @@
 			<artifactId>hadoop-client</artifactId>
 		</dependency>
 		<dependency>
-				<groupId>org.postgresql</groupId>
-				<artifactId>postgresql</artifactId>
-		</dependency>
-		<dependency>
-				<groupId>com.ebusiness</groupId>
-				<artifactId>ebusiness-etl</artifactId>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>jdk.tools</groupId>

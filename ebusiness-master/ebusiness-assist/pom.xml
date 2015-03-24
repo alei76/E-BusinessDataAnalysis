@@ -8,8 +8,8 @@
 		<artifactId>ebusiness-master</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>ebusiness-report</artifactId>
-	<name>ebusiness-report</name>
+	<artifactId>ebusiness-assist</artifactId>
+	<name>ebusiness-assist</name>
 	<url>http://maven.apache.org</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -33,12 +33,16 @@
 			<artifactId>hadoop-client</artifactId>
 		</dependency>
 		<dependency>
-				<groupId>org.postgresql</groupId>
-				<artifactId>postgresql</artifactId>
+			<groupId>org.apache.mahout</groupId>
+			<artifactId>mahout-core</artifactId>
 		</dependency>
 		<dependency>
-				<groupId>com.ebusiness</groupId>
-				<artifactId>ebusiness-etl</artifactId>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.ebusiness</groupId>
+			<artifactId>ebusiness-etl</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>jdk.tools</groupId>
@@ -47,5 +51,5 @@
 			<scope>system</scope>
 			<systemPath>${JAVA_HOME}/lib/tools.jar</systemPath>
 		</dependency>
-	</dependencies>
+</dependencies>
 </project>

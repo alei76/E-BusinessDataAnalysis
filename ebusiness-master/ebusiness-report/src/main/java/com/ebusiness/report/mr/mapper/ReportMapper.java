@@ -3,14 +3,14 @@ package com.ebusiness.report.mr.mapper;
 import java.io.IOException;
 import java.util.HashMap;
 
-import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang.StringUtils;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
 
+import com.ebusiness.etl.transform.ITransformer;
+import com.ebusiness.etl.transform.JsonTransformer;
 import com.ebusiness.report.ReportOutputTuple;
-import com.ebusiness.report.etl.transform.ITransformer;
-import com.ebusiness.report.etl.transform.JsonTransformer;
 
 public class ReportMapper extends Mapper<Object, Text, IntWritable,ReportOutputTuple> {
 

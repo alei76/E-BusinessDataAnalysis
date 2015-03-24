@@ -34,14 +34,11 @@ public class DBRecordWriter extends RecordWriter<IntWritable, ReportOutputTuple>
 		
 		try {
 			statement = conn.createStatement();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		try {
 			statement.executeUpdate(sql.toString());
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+	
 		
 	}
 

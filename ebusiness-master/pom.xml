@@ -1,8 +1,8 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.hadoop.ebusiness</groupId>
+	<groupId>com.ebusiness</groupId>
 	<artifactId>ebusiness-master</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
@@ -13,6 +13,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<org.apache.hadoop>2.5.0</org.apache.hadoop>
+		<com.business.etl>0.0.1-SNAPSHOT</com.business.etl>
 		<org.apache.mahout>0.9</org.apache.mahout>
 		<junit.version>4.10</junit.version>
 		<org.postgresql.version>9.3-1101-jdbc4</org.postgresql.version>
@@ -51,9 +52,16 @@
 				<artifactId>postgresql</artifactId>
 				<version>${org.postgresql.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>com.ebusiness</groupId>
+				<artifactId>ebusiness-etl</artifactId>
+				<version>${com.business.etl}</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 	<modules>
 		<module>ebusiness-report</module>
-	</modules>
+    <module>ebusiness-assist</module>
+    <module>ebusiness-etl</module>
+  </modules>
 </project>
