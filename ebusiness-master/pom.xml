@@ -48,6 +48,11 @@
 				<version>${org.apache.mahout}</version>
 			</dependency>
 			<dependency>
+				<groupId>org.apache.mahout</groupId>
+				<artifactId>mahout-integration</artifactId>
+				<version>${org.apache.mahout}</version>
+			</dependency>
+			<dependency>
 				<groupId>org.postgresql</groupId>
 				<artifactId>postgresql</artifactId>
 				<version>${org.postgresql.version}</version>

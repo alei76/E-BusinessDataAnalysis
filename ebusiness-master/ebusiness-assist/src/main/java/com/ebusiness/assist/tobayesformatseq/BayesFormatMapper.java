@@ -73,10 +73,10 @@ public class BayesFormatMapper extends Mapper<Object, Text, Text, StringTuple> {
        try {
            TokenStream ts = analyzer.tokenStream("", new StringReader(input));
            Token token;
-           while ((token = ts.next()) != null) {
+         /*  while ((token = ts.next()) != null) {
         	   //参考分词的源码，用new String，因为看不到token的源码，不知道会不会是和substring一样的结构，怕内存溢出
               document.add(new String(token.termText()));
-           }
+           }*/
            return document;
        } catch (Exception e) {
            e.printStackTrace();
